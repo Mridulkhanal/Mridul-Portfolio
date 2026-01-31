@@ -657,3 +657,147 @@ html, body {
     margin: 0 auto;
   }
 }
+
+.projects-section {
+  min-height: 100vh;
+  padding: 10rem 3rem 6rem;
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.project-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  margin-bottom: 4rem;
+}
+
+.tab-btn {
+  padding: 0.8rem 2rem;
+  font-family: 'Orbitron', sans-serif;
+  background: rgba(0, 212, 255, 0.1);
+  border: 1px solid #00d4ff;
+  color: #00d4ff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.tab-btn.active {
+  background: #00d4ff;
+  color: #000;
+  border-color: #00d4ff;
+  box-shadow: 0 0 20px #00d4ff;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-card {
+  background: rgba(10, 15, 20, 0.8);
+  border: 1px solid rgba(0, 255, 65, 0.2);
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.4s;
+  backdrop-filter: blur(6px);
+}
+
+.project-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  filter: brightness(0.9);
+  transition: all 0.4s;
+}
+
+.project-card:hover .project-image {
+  filter: brightness(1.1);
+}
+
+.category-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.project-title {
+  font-size: 1.6rem;
+  color: #e0ffe0;
+  padding: 1.5rem 1.5rem 0.5rem;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.project-desc {
+  font-size: 1.1rem;
+  color: #aaffaa;
+  padding: 0 1.5rem 1rem;
+}
+
+.tech-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  padding: 0 1.5rem 1.5rem;
+}
+
+.tech-badge {
+  background: rgba(0, 255, 65, 0.15);
+  color: #00ff41;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.project-buttons {
+  display: flex;
+  gap: 1rem;
+  padding: 0 1.5rem 1.5rem;
+}
+
+.btn-code, .btn-demo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+.btn-code {
+  background: #00ff41;
+  color: #000;
+}
+
+.btn-code:hover {
+  box-shadow: 0 0 25px #00ff41;
+}
+
+.btn-demo {
+  background: #00d4ff;
+  color: #000;
+}
+
+.btn-demo:hover {
+  box-shadow: 0 0 25px #00d4ff;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  .project-buttons {
+    flex-direction: column;
+  }
+}

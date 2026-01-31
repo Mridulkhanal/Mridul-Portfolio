@@ -3,6 +3,7 @@ import MatrixRain from './components/MatrixRain';
 import './index.css';
 import About from './components/About';
 import Skills from './components/Skills';
+import Projects from './components/Projects';
 import { FaCertificate, FaCode, FaBrain, FaMailBulk, FaArrowRight, FaLinkedin, FaGithub, FaInstagram, FaFacebook } from 'react-icons/fa'; 
 
 function App() {
@@ -117,6 +118,7 @@ function App() {
       {/* Other sections: About, Skills, etc. */}
       <About />
       <Skills />
+      <Projects />
       {/* ... */}
     </>
   );
