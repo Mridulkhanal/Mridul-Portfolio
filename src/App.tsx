@@ -4,6 +4,7 @@ import './index.css';
 import About from './components/About';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
+import Certifications from './components/Certifications';
 import { FaCertificate, FaCode, FaBrain, FaMailBulk, FaArrowRight, FaLinkedin, FaGithub, FaInstagram, FaFacebook } from 'react-icons/fa'; 
 
 function App() {
@@ -115,11 +116,10 @@ function App() {
         </motion.div>
       </div>
 
-      {/* Other sections: About, Skills, etc. */}
       <About />
       <Skills />
       <Projects />
-      {/* ... */}
+      <Certifications />
     </>
   );
 }
