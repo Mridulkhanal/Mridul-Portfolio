@@ -3,7 +3,7 @@ import MatrixRain from './components/MatrixRain';
 import './index.css';
 import About from './components/About';
 import Skills from './components/Skills';
-import { FaCertificate, FaCode, FaBrain, FaMailBulk, FaArrowRight, FaLinkedin, FaGithub, } from 'react-icons/fa'; 
+import { FaCertificate, FaCode, FaBrain, FaMailBulk, FaArrowRight, FaLinkedin, FaGithub, FaInstagram, FaFacebook } from 'react-icons/fa'; 
 
 function App() {
   const taglineText = "I Build Interactive Web Experiences";
@@ -108,6 +108,8 @@ function App() {
         >
           <a href="https://github.com/Mridulkhanal" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
           <a href="https://www.linkedin.com/in/mridul-khanal-686028304/" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
+          <a href="https://www.instagram.com/khanal.mridul/" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
+          <a href="https://www.facebook.com/mrdula.khanala/" target="_blank" rel="noopener noreferrer"><FaFacebook /></a>
           <a href="mailto:khanalmridul30@gmail.com"><FaMailBulk /></a>
         </motion.div>
       </div>

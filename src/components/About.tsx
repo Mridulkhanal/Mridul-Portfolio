@@ -36,9 +36,9 @@ const drives = [
 ];
 
 const stats = [
-  { value: '4', label: 'PROJECTS BUILT', icon: <FaTrophy />, color: '#00ff41' },
+  { value: '11+', label: 'PROJECTS BUILT', icon: <FaTrophy />, color: '#00ff41' },
   { value: '8+', label: 'TECHNOLOGIES', icon: <FaCode />, color: '#00d4ff' },
-  { value: '2', label: 'CERTIFICATIONS', icon: <FaCertificate />, color: '#ffaa00' },
+  { value: '3+', label: 'CERTIFICATIONS', icon: <FaCertificate />, color: '#ffaa00' },
 ];
 
 const education = [
