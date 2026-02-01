@@ -5,7 +5,7 @@ import About from './components/About';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Certifications from './components/Certifications';
-import { FaCertificate, FaCode, FaBrain, FaMailBulk, FaArrowRight, FaLinkedin, FaGithub, FaInstagram, FaFacebook } from 'react-icons/fa'; 
+import { FaCertificate, FaCode, FaBrain, FaMailBulk, FaArrowRight, FaArrowDown, FaLinkedin, FaGithub, FaInstagram, FaFacebook } from 'react-icons/fa'; 
 
 function App() {
   const taglineText = "I Build Interactive Web Experiences";
@@ -16,11 +16,13 @@ function App() {
 
       <nav className="fixed-nav">
   <div className="nav-container">
-    {/* Logo / Name */}
     <div className="nav-logo">
-      <a href="#home" className="logo-text">Mridul</a>
+      <a href="#home" className="logo-text">
+        Mridul
+      </a>
     </div>
-    <div className="nav-links">
+
+    <div className="nav-links desktop-links">
       <a href="#home" className="nav-item">Home</a>
       <a href="#about" className="nav-item">About</a>
       <a href="#skills" className="nav-item">Skills</a>
@@ -28,6 +30,36 @@ function App() {
       <a href="#certifications" className="nav-item">Certifications</a>
       <a href="#contact" className="nav-item">Contact</a>
     </div>
+
+    <div className="nav-resume">
+      <a
+        href="/resume.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="resume-btn"
+      >
+        Resume <FaArrowDown />
+      </a>
+    </div>
+
+    <button className="mobile-toggle" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  {/* Mobile menu dropdown */}
+  <div className="mobile-menu">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#contact">Contact</a>
+    <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="mobile-resume">
+      Resume
+    </a>
   </div>
 </nav>
 
