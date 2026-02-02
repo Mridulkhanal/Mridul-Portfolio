@@ -6,6 +6,7 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Certifications from './components/Certifications';
 import Contact from './components/Contact';
+import Footer from './components/Footer';
 import { FaCertificate, FaCode, FaBrain, FaMailBulk, FaArrowRight, FaArrowDown, FaLinkedin, FaGithub, FaInstagram, FaFacebook } from 'react-icons/fa'; 
 
 function App() {
@@ -18,7 +19,14 @@ function App() {
       <nav className="fixed-nav">
   <div className="nav-container">
     <div className="nav-logo">
-      <a href="#home" className="logo-text">
+      <a 
+        href="#" 
+        onClick={(e) => {
+          e.preventDefault();
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }}
+        className="logo-text"
+      >
         Mridul
       </a>
     </div>
@@ -33,12 +41,7 @@ function App() {
     </div>
 
     <div className="nav-resume">
-      <a
-        href="/resume.pdf"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="resume-btn"
-      >
+      <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="resume-btn">
         Resume <FaArrowDown />
       </a>
     </div>
@@ -64,6 +67,7 @@ function App() {
   </div>
 </nav>
 
+      <div id="home" className="hero-anchor"></div>
       <div className="hero-container">
         {/* Animated icons above name */}
         <motion.div
@@ -130,8 +134,24 @@ function App() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 4, duration: 0.6 }}
         >
-          <button className="cta-primary">View My Work <FaArrowRight /></button>
-          <button className="cta-secondary">Get In Touch <FaMailBulk /></button>
+          <div className="hero-cta">
+  <button 
+    className="cta-primary"
+    onClick={() => {
+      document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+    }}
+  >
+    View My Work <FaArrowRight />
+  </button>
+  <button 
+    className="cta-secondary"
+    onClick={() => {
+      document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+    }}
+  >
+    Get In Touch <FaMailBulk />
+  </button>
+</div>
         </motion.div>
 
         {/* Social Icons */}
@@ -154,6 +174,7 @@ function App() {
       <Projects />
       <Certifications />
       <Contact />
+      <Footer />
     </>
   );
 }
