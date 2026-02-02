@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 import MatrixRain from './components/MatrixRain';
 import './index.css';
 import About from './components/About';
@@ -11,6 +12,8 @@ import { FaCertificate, FaCode, FaBrain, FaMailBulk, FaArrowRight, FaArrowDown, 
 
 function App() {
   const taglineText = "I Build Interactive Web Experiences";
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
     <>
@@ -19,16 +22,20 @@ function App() {
       <nav className="fixed-nav">
   <div className="nav-container">
     <div className="nav-logo">
-      <a 
-        href="#" 
-        onClick={(e) => {
-          e.preventDefault();
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-        }}
-        className="logo-text"
-      >
-        Mridul
-      </a>
+      <a
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+            className="logo-link" 
+          >
+            <img
+              src="/logo.ico" 
+              alt="Mridul Logo"
+              className="logo-img" 
+            />
+          </a>
     </div>
 
     <div className="nav-links desktop-links">
@@ -46,7 +53,12 @@ function App() {
       </a>
     </div>
 
-    <button className="mobile-toggle" aria-label="Toggle menu">
+    <button 
+      className="mobile-toggle" 
+      onClick={toggleMenu}
+      aria-label="Toggle menu"
+      aria-expanded={isOpen}
+    >
       <span></span>
       <span></span>
       <span></span>
@@ -54,14 +66,14 @@ function App() {
   </div>
 
   {/* Mobile menu dropdown */}
-  <div className="mobile-menu">
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#certifications">Certifications</a>
-    <a href="#contact">Contact</a>
-    <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="mobile-resume">
+  <div className={`mobile-menu ${isOpen ? 'active' : ''}`}>
+    <a href="#home"    onClick={() => setIsOpen(false)}>Home</a>
+    <a href="#about"   onClick={() => setIsOpen(false)}>About</a>
+    <a href="#skills"  onClick={() => setIsOpen(false)}>Skills</a>
+    <a href="#projects" onClick={() => setIsOpen(false)}>Projects</a>
+    <a href="#certifications" onClick={() => setIsOpen(false)}>Certifications</a>
+    <a href="#contact" onClick={() => setIsOpen(false)}>Contact</a>
+    <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)}>
       Resume
     </a>
   </div>

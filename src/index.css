@@ -213,24 +213,17 @@ html, body {
 }
 
 /* Logo */
-.logo-text {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2rem;
-  font-weight: 900;
-  color: #00ff41;
-  text-shadow: 0 0 15px rgba(0, 255, 65, 0.7);
-  letter-spacing: 0.1em;
-  transition: all 0.4s;
+.logo-img {
+  width: 40px; /* Adjust size as needed */
+  height: auto;
+  filter: brightness(1.2); /* Optional: Make it pop in dark theme */
+  transition: transform 0.3s ease; /* Optional: Hover effect */
 }
 
-.logo-text:hover {
-  color: #00d4ff;
-  text-shadow: 0 0 25px rgba(0, 212, 255, 0.8);
+.logo-img:hover {
+  transform: scale(1.1); /* Optional: Slight zoom on hover */
 }
 
-.logo-dot {
-  color: #00d4ff;
-}
 
 /* Desktop Links */
 .desktop-links {
@@ -338,34 +331,25 @@ html, body {
 }
 
 .mobile-menu a {
+  display: block;
+  margin: 12px 0;
   color: #e0ffe0;
-  font-size: 1.3rem;
   text-decoration: none;
-  transition: color 0.3s;
 }
 
 .mobile-menu a:hover {
-  color: #00ff41;
-}
-
-.mobile-resume {
-  background: linear-gradient(45deg, #00ff41, #00d4ff);
-  color: #000;
-  padding: 0.9rem 2rem;
-  border-radius: 50px;
-  font-weight: 600;
+  color: #4fdc72;
 }
 
 /* Responsive Rules */
 @media (max-width: 992px) {
-  .desktop-links {
-    display: none;
-  }
-
   .mobile-toggle {
-    display: flex;
+    display: flex !important;   /* make sure it appears */
   }
-
+  .desktop-links {
+    display: none !important;
+  }
+  
   .mobile-menu.active {
     display: flex;
   }
