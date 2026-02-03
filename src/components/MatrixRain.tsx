@@ -18,44 +18,56 @@ const MatrixRain = () => {
     resize();
     window.addEventListener('resize', resize);
 
-    // Characters
-    const chars = '010123456789$+-*/=%"#&@';
+    // Characters with more variety
+    const chars = '010123456789$+-*/=%"#&@ABCD'; // Added letters for cyberpunk feel
     const fontSize = 14;
     const columns = Math.floor(canvas.width / fontSize);
-    const drops: number[] = new Array(columns).fill(1);
+    const drops: number[] = Array.from({ length: columns }, () => Math.random() * canvas.height / fontSize); // Random start for variety
 
-    const draw = () => {
-      // Fade trail (stronger black overlay = clearer visibility)
-      ctx.fillStyle = 'rgba(45, 35, 35, 0.08)';
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+    let lastTime = 0;
+    const fps = 30; // Smoother control
+    const interval = 1000 / fps;
 
-      for (let i = 0; i < drops.length; i++) {
-        const text = chars[Math.floor(Math.random() * chars.length)];
-        const x = i * fontSize;
-        const y = drops[i] * fontSize;
+    const draw = (timestamp: number) => {
+      if (timestamp - lastTime >= interval) {
+        lastTime = timestamp;
 
-        // Brighter heads + fade tail
-        const brightness = Math.random() * 0.4 + 0.6; // 0.6–1.0
-        ctx.globalAlpha = brightness;
-        ctx.fillStyle = brightness > 0.9 ? '#00ff80' : '#00ff41'; // brighter green for heads
+        // Stronger fade for clearer trails
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.1)'; // Adjusted for better visibility
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-        ctx.font = `${fontSize}px monospace`;
-        ctx.fillText(text, x, y);
+        for (let i = 0; i < drops.length; i++) {
+          const text = chars[Math.floor(Math.random() * chars.length)];
+          const x = i * fontSize;
+          const y = drops[i] * fontSize;
 
-        // Reset drop randomly
-        if (y > canvas.height && Math.random() > 0.975) {
-          drops[i] = 0;
+          // Random brightness + occasional purple accent
+          const brightness = Math.random() * 0.5 + 0.5; // 0.5–1.0
+          const color = Math.random() > 0.95 ? '#ff00ff' : (brightness > 0.8 ? '#00ff80' : '#00ff41');
+          ctx.globalAlpha = brightness;
+          ctx.fillStyle = color;
+
+          ctx.font = `${fontSize}px monospace`;
+          ctx.fillText(text, x, y);
+
+          // Random speed (0.5–1.5) for variety
+          drops[i] += Math.random() * 1 + 0.5;
+
+          // Reset with randomness
+          if (y > canvas.height && Math.random() > 0.97) {
+            drops[i] = 0;
+          }
         }
-        drops[i]++;
+
+        ctx.globalAlpha = 1;
       }
 
-      ctx.globalAlpha = 1;
+      requestAnimationFrame(draw);
     };
 
-    const interval = setInterval(draw, 50); // slower = more visible trails
+    requestAnimationFrame(draw);
 
     return () => {
-      clearInterval(interval);
       window.removeEventListener('resize', resize);
     };
   }, []);
@@ -70,8 +82,7 @@ const MatrixRain = () => {
         height: '100%',
         zIndex: -2,
         pointerEvents: 'none',
-        opacity: 0.18, // slightly higher for visibility
-        border: '1px solid red', // TEMP DEBUG BORDER — remove later if visible
+        opacity: 0.2, // Slightly higher for energy without distraction
       }}
     />
   );
