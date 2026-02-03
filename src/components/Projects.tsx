@@ -12,7 +12,7 @@ const projectsData = [
     tech: ['React.js', 'TypeScript', 'CSS', 'Django', 'REST API'],
     image: '/src/components/images/kuhiro.jpg', 
     codeLink: 'https://github.com/Mridulkhanal/kuhiro-weather-app',
-    liveLink: 'https://kuhiro-weather-app.vercel.app/' 
+    liveLink: '' 
   },
   {
     category: 'E-commerce',
@@ -21,7 +21,7 @@ const projectsData = [
     tech: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL'],
     image: '/src/components/images/onlinenursery.jpg',
     codeLink: 'https://github.com/Mridulkhanal/online-nursery-plant-shopping-system',
-    liveLink: '' // i will add if deployed
+    liveLink: ''
   },
   {
     category: 'Game',
@@ -30,7 +30,7 @@ const projectsData = [
     tech: ['HTML', 'CSS', 'JavaScript'],
     image: '/src/components/images/wordscramble.jpg',
     codeLink: 'https://github.com/Mridulkhanal/Word-Scramble-Game',
-    liveLink: 'https://word-scramble-game.vercel.app/' // add if deployed
+    liveLink: 'https://word-scramble-game-zeta.vercel.app/'
   },
   {
     category: 'Portfolio',
@@ -39,7 +39,7 @@ const projectsData = [
     tech: ['React.js', 'HTML', 'CSS'],
     image: '/src/components/images/portfolio.jpg',
     codeLink: 'https://github.com/Mridulkhanal/my-portfolio',
-    liveLink: ''
+    liveLink: 'https://my-portfolio-gamma-murex-95.vercel.app/'
   },
   {
     category: 'Web App',
@@ -57,7 +57,7 @@ const projectsData = [
     tech: ['HTML', 'CSS', 'JavaScript'],
     image: '/src/components/images/agecalculator.jpg',
     codeLink: 'https://github.com/Mridulkhanal/age-calculator',
-    liveLink: ''
+    liveLink: 'https://age-calculator-smoky-mu.vercel.app/'
   },
   {
     category: 'Portfolio',
@@ -67,6 +67,15 @@ const projectsData = [
     image: '/src/components/images/mridulportfolio.jpg',
     codeLink: 'https://github.com/Mridulkhanal/Mridul-Portfolio',
     liveLink: ''
+  },
+  {
+    category: 'Web App',
+    title: 'Currency Converter',
+    description: 'A simple and user-friendly currency converter application that allows users to convert values between different currencies using real-time exchange rates.',
+    tech: ['CSS', 'JavaScript', 'HTML'],
+    image: '/src/components/images/Currency.jpg',
+    codeLink: 'https://github.com/Mridulkhanal/currency-converter',
+    liveLink: 'https://currency-converter-dusky-sigma-75.vercel.app/'
   },
 ];
 
