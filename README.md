@@ -3,7 +3,7 @@
 A modern, dark-themed, cyberpunk-inspired personal portfolio website built to showcase my skills, projects, certifications, and passion for web development.
 
 Live Demo: [https://mridulkhanal.com.np](https://mridulkhanal.com.np)  
-GitHub: [https://github.com/Mridulkhanal/my-portfolio](https://github.com/Mridulkhanal/my-portfolio)
+GitHub: [https://github.com/Mridulkhanal/Mridul-Portfolio](https://github.com/Mridulkhanal/Mridul-Portfolio)
 
 ## 🌌 Overview
 
@@ -41,28 +41,6 @@ The site features:
 - Fully responsive (mobile-first) layout
 - EmailJS-powered contact form with loading & success/error states
 - Direct resume PDF download from navbar
-
-## 📂 Project Structure (main folders/files)
-├── public/
-│   ├── logo.ico
-│   └── resume.pdf
-├── src/
-│   ├── components/
-│   │   ├── About.tsx
-│   │   ├── Certifications.tsx
-│   │   ├── Contact.tsx
-│   │   ├── Footer.tsx
-│   │   ├── MatrixRain.tsx
-│   │   ├── Projects.tsx
-│   │   └── Skills.tsx
-│   ├── App.tsx
-│   └── index.css
-└── vite.config.ts
-
-### Prerequisites
-
-- Node.js ≥ 18
-- npm or yarn
 
 ### Installation
 
