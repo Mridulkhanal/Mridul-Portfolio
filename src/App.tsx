@@ -23,12 +23,8 @@ function App() {
   <div className="nav-container">
     <div className="nav-logo">
       <a
-            href="#"
-            onClick={(e) => {
-              e.preventDefault();
-              window.scrollTo({ top: 0, behavior: 'smooth' });
-            }}
-            className="logo-link" 
+            href="#home"
+            onClick={() => setIsOpen(false)}
           >
             <img
               src="/logo.ico" 
