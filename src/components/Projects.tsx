@@ -10,7 +10,7 @@ const projectsData = [
     title: 'Kuhiro Weather App',
     description: 'Real-Time Global Weather Updates with Multi-Day Forecast and clean table layout. Responsive & Accessible Design.',
     tech: ['React.js', 'TypeScript', 'CSS', 'Django', 'REST API'],
-    image: '/src/components/images/kuhiro.jpg', 
+    image: '/images/kuhiro.jpg', 
     codeLink: 'https://github.com/Mridulkhanal/kuhiro-weather-app',
     liveLink: '' 
   },
@@ -19,7 +19,7 @@ const projectsData = [
     title: 'Online Nursery Plant Shopping System',
     description: 'User registration & login, Browse plants by category, Cart & checkout functionality.',
     tech: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL'],
-    image: '/src/components/images/onlinenursery.jpg',
+    image: '/images/onlinenursery.jpg',
     codeLink: 'https://github.com/Mridulkhanal/online-nursery-plant-shopping-system',
     liveLink: ''
   },
@@ -28,7 +28,7 @@ const projectsData = [
     title: 'Word Scramble Game',
     description: 'Two game modes: Normal and Challenge. 100 unique words with hints for varied gameplay. Responsive progress bar and hint system.',
     tech: ['HTML', 'CSS', 'JavaScript'],
-    image: '/src/components/images/wordscramble.jpg',
+    image: '/images/wordscramble.jpg',
     codeLink: 'https://github.com/Mridulkhanal/Word-Scramble-Game',
     liveLink: 'https://word-scramble-game-zeta.vercel.app/'
   },
@@ -37,7 +37,7 @@ const projectsData = [
     title: 'Personal Portfolio',
     description: 'Created a personal portfolio website to showcase my skills, certifications, and projects. Tech Stack: React.js, HTML5, CSS3.',
     tech: ['React.js', 'HTML', 'CSS'],
-    image: '/src/components/images/portfolio.jpg',
+    image: '/images/portfolio.jpg',
     codeLink: 'https://github.com/Mridulkhanal/my-portfolio',
     liveLink: 'https://my-portfolio-gamma-murex-95.vercel.app/'
   },
@@ -46,7 +46,7 @@ const projectsData = [
     title: 'Alarm-clock-django',
     description: 'A simple multi-alarm clock web app using Django. Features include setting multiple alarms, deleting alarms, and a clean user interface.',
     tech: ['HTML','Python', 'Django'],
-    image: '/src/components/images/alarm.jpg',
+    image: '/images/alarm.jpg',
     codeLink: 'https://github.com/Mridulkhanal/alarm-clock-django',
     liveLink: ''
   },
@@ -55,7 +55,7 @@ const projectsData = [
     title: 'Age Calculator',
     description: 'A simple and responsive web application that calculates a users age based on their date of birth. Built using HTML, CSS, and JavaScript.',
     tech: ['HTML', 'CSS', 'JavaScript'],
-    image: '/src/components/images/agecalculator.jpg',
+    image: '/images/agecalculator.jpg',
     codeLink: 'https://github.com/Mridulkhanal/age-calculator',
     liveLink: 'https://age-calculator-smoky-mu.vercel.app/'
   },
@@ -64,7 +64,7 @@ const projectsData = [
     title: 'Mridul Portfolio',
     description: 'Advanced personal portfolio with dark theme and animations.',
     tech: ['React.js', 'Vite', 'CSS', 'JavaScript', 'HTML'],
-    image: '/src/components/images/mridulportfolio.jpg',
+    image: '/images/mridulportfolio.jpg',
     codeLink: 'https://github.com/Mridulkhanal/Mridul-Portfolio',
     liveLink: ''
   },
@@ -73,7 +73,7 @@ const projectsData = [
     title: 'Currency Converter',
     description: 'A simple and user-friendly currency converter application that allows users to convert values between different currencies using real-time exchange rates.',
     tech: ['CSS', 'JavaScript', 'HTML'],
-    image: '/src/components/images/Currency.jpg',
+    image: '/images/Currency.jpg',
     codeLink: 'https://github.com/Mridulkhanal/currency-converter',
     liveLink: 'https://currency-converter-dusky-sigma-75.vercel.app/'
   },
